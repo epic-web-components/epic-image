@@ -1,0 +1,26 @@
+{
+  "name": "epic-image",
+  "version": "1.0.3",
+  "authors": [
+    "Max Leitch <mjleitch@gmail.com>"
+  ],
+  "description": "An element that give images a power boost.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "epic-image.html",
+  "homepage": "https://github.com/epic-web-components/seed-element/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}
