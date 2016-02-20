@@ -8,15 +8,32 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-<html>
+<html show-grid>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title>epic-image Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
     <link rel="import" href="../epic-image.html">
+    <style>
+      html[show-grid] {
+        background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+        background-position: left -1px;
+        background-repeat: repeat;
+        background-size: 1.5rem 1.5rem;
+      }
+
+      html[show-grid] body {
+        box-shadow: 1px 0px 0px hsla(200, 100%, 50%, .3), -1px 0px 0px hsla(200, 100%, 50%, .3);
+      }
+
+      html[show-grid] body * {
+        background:rgba(147,128,108,.05);
+      }
+    </style>
   </head>
-  <body unresolved>
+  <body unresolved style="padding:0 1em;margin:0;">
     <epic-image reveal src="https://images.contentful.com/1kzutnf7jc3r/4cA3YSta8gYKSAuGCAAUes/3f60c46d258c9b245eaba75979bea2df/DCP_Landing_Page.jpg">
       <h2>DAVID "DCP" PORCHERON</h2>
       <p>Whistler</p>
