@@ -63,7 +63,7 @@ Example:
       }
 
       :host[reveal] .content {
-        bottom: -8em;
+        bottom: -100%;
         transition: all .5s ease;
       }
 
@@ -72,7 +72,7 @@ Example:
       }
 
       :host[reveal][disabled]:hover .content {
-        bottom: -8em;
+        bottom: -100%;
       }
 
     </style>
@@ -81,7 +81,7 @@ Example:
     </template>
     <div class="container" style="background-color:{{backgroundColor}};">
       <img src="{{src}}" alt="{{alt}}">
-      <div class="content">
+      <div id="content" class="content">
         <content></content>
       </div>
     </div>
@@ -128,6 +128,15 @@ Example:
        * `disabled` indicates that the image cannot be interacted with
        */
       disabled: Boolean,
+
+      /**
+       * `reveal` hides the content block by default and slides in on mouse over.
+       */
+      reveal: {
+        type: Boolean,
+        value: false,
+        notify: true
+      },
 
       /**
        * `fancy` indicates that the element should don a monocle and tophat,
